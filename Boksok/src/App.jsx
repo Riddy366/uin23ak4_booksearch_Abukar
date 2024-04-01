@@ -7,10 +7,15 @@ function BookSearch() {
 
   useEffect(() => {
     const fetchBooks = async () => {
-      const url = `https://openlibrary.org/search.json?q=${searchTerm}`;
-      const response = await fetch(url);
-      const data = await response.json();
-      setBooks(data.docs);
+      try{
+        const response = await fetch(`https://openlibrary.org/search.json?q=${searchTerm}`);
+        const data = await response.json();
+        setBooks(data.docs);
+      }catch{
+        console.error("Det har skjedd en feil")
+        setBooks([])
+      }
+     
     };
 
     fetchBooks();
