@@ -15,7 +15,7 @@ function BookSearch() {
         console.error("Det har skjedd en feil")
         setBooks([])
       }
-     
+     // https://covers.openlibrary.org/b/isbn/0385472579-S.jpg bilde for bøkene
     };
 
     fetchBooks();
