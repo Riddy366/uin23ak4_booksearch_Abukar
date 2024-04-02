@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import BookList from './components/BookList'; // Pass på at stien stemmer overens med hvor du plasserte filen
+import BookList from './components/BookList'; 
 
 function BookSearch() {
   const [books, setBooks] = useState([]);
