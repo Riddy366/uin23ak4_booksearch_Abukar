@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import SearchBar from "./components/SearchBar";
 import SearchResult from "./components/SearchResult";
-import './style/main.scss'
 
 function BookSearch() {
   const [books, setBooks] = useState([]);
@@ -27,9 +26,8 @@ function BookSearch() {
 
   return (
     <>
-    <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       <SearchResult books={books} />
-      
+      <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
     </>
   );
 }

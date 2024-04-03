@@ -11,7 +11,7 @@ export default function SearchBar({ setSearchTerm }) {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <input id='searchbar'
+        <input
           type="text"
           placeholder="Søk etter bøker..."
           value={search}
