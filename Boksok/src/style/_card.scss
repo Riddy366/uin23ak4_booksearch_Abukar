@@ -1,5 +1,5 @@
 .card {
-    flex: 0 1 20%; // 'flex-grow' er 0, 'flex-shrink' er 1, og 'flex-basis' er satt til 32%
+    flex: 0 1 20%; 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -7,14 +7,14 @@
     text-align: center;
     border-radius: 10px;
     background-image: linear-gradient(to right top, #2c0537, #3d0f5c, #472087, #4334b7, #124beb);
-    margin: 10px; // Alternativt til 'gap', spesielt nyttig hvis du må støtte eldre nettlesere
+    margin: 10px; 
     padding: 1rem;
     box-shadow: 0 4px 6px rgba(0,0,0,.1);
   
     img {
       align-self: center;
       width: auto;
-      max-width: 100%; // Sørger for at bildet ikke strekker seg utenfor kortet
+      max-width: 100%;
       height: auto;
     }
   
