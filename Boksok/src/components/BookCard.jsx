@@ -3,6 +3,7 @@ export default function Bookcard({
   first_publish_year,
   author_name,
   coverImage,
+  ratings_average
 }) {
   return (
     <div className="card">
@@ -16,6 +17,7 @@ export default function Bookcard({
       )}
       <p>Publish Year: {first_publish_year}</p>
       <p>Author: {author_name}</p>
+      <p>Average Rating: {ratings_average}</p>
     </div>
   );
 }
