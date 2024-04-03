@@ -1,0 +1,7 @@
+.books {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; // Dette kan også være 'flex-start' med margin for å kontrollere avstanden
+    gap: 20px; // Styrer avstanden mellom kortene hvis du ikke bruker margin direkte på kortene
+  }
+  

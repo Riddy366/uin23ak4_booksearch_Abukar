@@ -3,9 +3,9 @@ import Bookcard from "./BookCard";
 
 export default function SearchResult({ books }) {
   return (
-    <div>
+    <div className="books">
       {books.map((book, index) => (
-        <Bookcard
+        <Bookcard className='books'
           key={index}
           keyBook={book.key}
           title={book.title}
