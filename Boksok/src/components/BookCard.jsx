@@ -1,16 +1,21 @@
-export default function BookCard({keyBook, title, first_publish_year, author_name, ratings_average, coverImage}) {
-
-    return (
-    <>
-   
-        <article className="book-Card" key={keyBook}>
-        <h3>{title}</h3>
-        <p>Publish Year: {first_publish_year}</p>
-        <p>Author: {author_name}</p>
-        <p>Average rating: {ratings_average}</p>
-        <img src={`https://covers.openlibrary.org/b/isbn/${coverImage}-S.jpg`} style={{width: "100px", height: "100px"}} alt={title}/>
-        </article>
-
-    </>
-    )
+export default function Bookcard({
+  title,
+  first_publish_year,
+  author_name,
+  coverImage,
+}) {
+  return (
+    <div className="card">
+      <h3>{title}</h3>
+      {coverImage && (
+        <img
+          src={coverImage}
+          alt={`Cover of ${title}`}
+          style={{ width: "100px", height: "150px" }}
+        />
+      )}
+      <p>Publish Year: {first_publish_year}</p>
+      <p>Author: {author_name}</p>
+    </div>
+  );
 }
