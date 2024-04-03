@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import BookList from './components/BookList'; 
+import SearchBar from './components/SearchBar';
 
 function BookSearch() {
   const [books, setBooks] = useState([]);
-  const [searchTerm, setSearchTerm] = useState("James+bond");
+  const [searchTerm, setSearchTerm] = useState("James+bond"); // Default 
 
   useEffect(() => {
     const fetchBooks = async () => {
@@ -22,7 +23,10 @@ function BookSearch() {
   }, [searchTerm]);
 
   return (
-    <BookList books={books} searchTerm={searchTerm} />
+    <>
+    <BookList books={books} searchTerm={searchTerm}  />
+    </>
+    
   );
 }
 
