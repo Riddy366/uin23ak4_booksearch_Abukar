@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import BookList from './components/BookList'; 
 import SearchBar from './components/SearchBar';
+import SearchResult from './components/SearchResult';
+
 
 function BookSearch() {
   const [books, setBooks] = useState([]);
@@ -9,7 +10,7 @@ function BookSearch() {
   useEffect(() => {
     const fetchBooks = async () => {
       try{
-        const response = await fetch(`https://openlibrary.org/search.json?q=${searchTerm}`);
+        const response = await fetch(`https://openlibrary.org/search.json?q=${searchTerm}&limit=20`);
         const data = await response.json();
         setBooks(data.docs);
       }catch{
@@ -24,7 +25,8 @@ function BookSearch() {
 
   return (
     <>
-    <BookList books={books} searchTerm={searchTerm}  />
+    <SearchResult books={books} />
+    <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
     </>
     
   );

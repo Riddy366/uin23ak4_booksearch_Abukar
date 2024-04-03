@@ -1,10 +1,13 @@
-import { useState } from "react";
+import React, { useState } from 'react';
 
-export default function Searchbar() {
+export default function SearchBar({ setSearchTerm }) {
   const [search, setSearch] = useState("");
+
   const handleSubmit = (event) => {
-    event.preventDefault("");
+    event.preventDefault();
+    setSearchTerm(search.replace(/\s/g, '+'));
   };
+
   return (
     <div>
       <form onSubmit={handleSubmit}>
