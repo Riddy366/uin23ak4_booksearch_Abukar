@@ -14,9 +14,12 @@ export default function Bookcard({
           alt={`Cover of ${title}`}
         />
       )}
+      <div className="bookInfo">
       <p>Publish Year: {first_publish_year}</p>
       <p>Author: {author_name}</p>
       <p>Average Rating: {ratings_average}</p>
+      </div>
     </article>
+
   );
 }

@@ -2,8 +2,10 @@
     flex: 0 1 20%; 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    border-style:  #fff;
+    border-style: solid;
+    border-radius: 5px;
+    margin: 10px;
+ 
     
   
     img {
@@ -17,4 +19,8 @@
       text-align: center;
       margin: 10px 0;
     }
+    .bookInfo{
+      display: flex;
+    }
+  
   }

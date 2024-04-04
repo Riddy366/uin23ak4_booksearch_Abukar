@@ -27,6 +27,7 @@ function BookSearch() {
 
   return (
     <>
+    <h1>E-Bibliotek</h1>
     <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       <SearchResult books={books} />
       
